@@ -18,7 +18,7 @@ This is a weather forecast application built with JavaScript, the OpenWeather AP
 ## Setup and Installation
 To run this app locally, follow these steps:
 
-1. Clone the repository: bash git clone https://github.com/your-username/weather-app.git
+1. Clone the repository: bash git clone https://github.com/M-Danish-Rafique/WeatherWise.git
 2. Navigate to the project directory: bash cd weather-app
 3. Obtain an API key from OpenWeather and Gemini API.
 4. Replace the API keys in the JavaScript code with your own keys.
