@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo"><img src="Images/rainy-day.png" width="32" style="margin-right: 5px;">WeatherWise</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active"><img style="margin-left: 5px;" src="Images/dashboard-panel-active.png" height="14"><span style="margin-left: 5px;">Dashboard</span></a></li>
+                    <li><a href="table.html"><img style="margin-left: 5px;" src="Images/table-layout-unactive.png" height="14"><span style="margin-left: 5px;">Tables</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" id="city-search" placeholder="Search weather by city...">
+                        <button id="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <img src="Images/user.png" alt="User profile">
+                </div>
+            </header>
+            <div class="loader">
+                <div class="dot-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <section class="weather-widget">
+                <div id="current-weather"></div>
+            </section>
+            <section class="charts">
+                <div class="chart" id="vertical-bar-chart">
+                    <p style="font-size: 20px; justify-items: flex-start;"><img style="margin-right: 10px;" width="17" src="Images/stats.png" alt="">Vertical Bar Chart</p>
+                    <canvas style="margin-top: 20%;" id="temp-bar-chart"></canvas>
+                </div>
+                <div class="chart" id="doughnut-chart">
+                    <p style="font-size: 20px; justify-items: flex-start;"><img style="margin-right: 10px;" width="21" src="Images/chart-pie-alt.png" alt="">Doughnut Chart</p>
+                    <canvas id="condition-doughnut-chart"></canvas>
+                </div>
+                <div class="chart" id="line-chart">
+                    <p style="font-size: 20px; justify-self: flex-start;"><img style="margin-right: 10px;" width="18" src="Images/chart-line-up.png" alt="">Line Chart</p>
+                    <canvas style="margin-top: 20%;" id="temp-line-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Tables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo"><img src="Images/rainy-day.png" width="32" style="margin-right: 5px;">WeatherWise</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><img style="margin-left: 5px;" src="Images/dashboard-panel-unactive.png" height="14"><span style="margin-left: 5px;">Dashboard</span></a></li>
+                    <li><a href="table.html" class="active"><img style="margin-left: 5px;" src="Images/table-layout-active.png" height="14"><span style="margin-left: 5px;">Tables</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" id="city-search" placeholder="Search weather by city...">
+                        <button id="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <img src="Images/user.png" alt="User profile">
+                </div>
+            </header>
+            <div class="loader">
+                <div class="dot-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <section class="weather-table">
+                <div style="display: flex; justify-content:space-between;">
+                    <h2 style="margin-bottom: 8px;"><img style="margin-right: 8px;" width="22" src="Images/smog.png" alt="">5-Day Weather Forecast</h2>
+                    <div class="filter-container">
+                        <select style="height: 37px;" id="filter-dropdown">
+                            <option value="default">Select a filter</option>
+                            <option value="ascending">Sort Ascending</option>
+                            <option value="descending">Sort Descending</option>
+                            <option value="rainy">Rainy Days</option>
+                            <option value="highest">Highest Temperature</option>
+                        </select>
+                    </div>
+                </div>
+                <table id="forecast-table">
+                    <!-- Table content will be dynamically generated -->
+                </table>
+                <div id="pagination"></div>
+            </section>
+            <section class="chatbot">
+                <h2 style="margin-bottom: 8px;"><img style="margin-right: 8px;" width="22" src="Images/chatbot-speech-bubble.png" alt="">Weather Chatbot</h2>
+                <div class="chat-bar">
+                    <input type="text" id="chatbot-input" placeholder="Ask about the weather...">
+                    <button id="chatbot-send">Send</button>
+                </div>
+                <div id="chatbot-answers"></div>
+            </section>
+        </main>
+    </div>
+    <script src="table.js"></script>
+</body>
+</html>
